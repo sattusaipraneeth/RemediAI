@@ -1,0 +1,104 @@
+/* Main container styles */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header section */
+.header-section {
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Health profile card */
+.health-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.health-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Recommendations grid */
+.recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.recommendation-box {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-box h3 {
+    color: #0083b0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.recommendation-list {
+    list-style: none;
+    padding: 0;
+}
+
+.recommendation-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+/* Symptom checker section */
+.symptom-section {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.symptom-form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.symptom-form button {
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.symptom-form button:hover {
+    transform: translateY(-2px);
+}
+
+/* Results section */
+.results-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #0083b0;
+}

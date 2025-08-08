@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Care System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='services.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='doctors.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+    <script src="{{ url_for('static', filename='animations.js') }}"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">HealthCare</div>
+        <div class="nav-links">
+            {% if 'user_id' in session %}
+                <a href="{{ url_for('home') }}">Dashboard</a>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('service') }}">Services</a>
+                <a href="{{ url_for('doctors') }}">Doctors</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

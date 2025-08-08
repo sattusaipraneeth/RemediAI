@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="dashboard-container">
+    <div class="welcome-header">
+        <h1>Welcome, {{ user.name }}!</h1>
+        <p>Your Personal Health Dashboard</p>
+    </div>
+
+    <div class="health-profile card">
+        <h2>Your Health Profile</h2>
+        <p>Condition: {{ user.health_condition }}</p>
+        <p>Details: {{ user.health_details }}</p>
+    </div>
+
+    <div class="recommendations">
+        {% if recommendations.diet %}
+        <div class="recommendation-card">
+            <h3>Diet Recommendations</h3>
+            <ul>
+                {% for item in recommendations.diet %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        
+        {% if recommendations.natural_remedies %}
+        <div class="recommendation-card natural-remedies">
+            <h3>🌿 Natural Remedies</h3>
+            <ul class="recommendation-list">
+                {% for remedy in recommendations.natural_remedies %}
+                <li>{{ remedy }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        
+        <!-- Similar blocks for exercise and medications -->
+    </div>
+
+    <div class="symptom-checker card">
+        <h2>Symptom Checker</h2>
+        <form method="POST">
+            <input type="text" name="symptoms" placeholder="Enter your symptoms">
+            <button type="submit">Check Symptoms</button>
+        </form>
+        
+        {% if prediction %}
+        <div class="result-section">
+            <h3>Analysis Result:</h3>
+            <p>Condition: {{ prediction }}</p>
+            <p>Recommended Remedy: {{ remedy }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Add this after the symptom checker section -->
+    {% if common_solutions %}
+    <div class="common-problems card">
+        <h2>Common Problems & Solutions</h2>
+        <div class="solutions-grid">
+            {% for problem, solution in common_solutions.items() %}
+            <div class="solution-item">
+                <h4>{{ problem }}</h4>
+                <p>{{ solution }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

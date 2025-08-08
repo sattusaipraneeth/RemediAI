@@ -1,0 +1,120 @@
+/* Basic styling for the entire application */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Page-specific background styles */
+.registration-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('../static/images/registration-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.home-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('../static/images/home-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.services-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('../static/images/services-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.doctors-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('../static/images/doctors-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.about-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('../static/images/about-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.contact-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('../static/images/contact-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar {
+    background-color: #0083b0;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Common form styles */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #0083b0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #006d94;
+}
+
+/* Error and success messages */
+.error {
+    color: #dc3545;
+    margin: 10px 0;
+}
+
+.success {
+    color: #28a745;
+    margin: 10px 0;
+}

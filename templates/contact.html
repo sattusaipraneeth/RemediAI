@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="contact-container">
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p class="tagline">We're Here to Help You</p>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-info">
+            <div class="info-card">
+                <div class="info-icon">📍</div>
+                <h3>Our Location</h3>
+                <p> Vijaya Health Care</p>
+                <p> Clock tower,Hyd 500001 </p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📞</div>
+                <h3>Phone Numbers</h3>
+                <p>Emergency: 108 </p>
+                <p>General: 102 </p>
+                       
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📧</div>
+                <h3>Email Address</h3>
+                <p>info@healthcare.com</p>
+                <p>support@healthcare.com</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">⏰</div>
+                <h3>Working Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 8:00 PM</p>
+                <p>Weekend: 9:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
