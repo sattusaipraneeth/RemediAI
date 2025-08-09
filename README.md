@@ -134,4 +134,4 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 **Saipraneeth Sattu**  
 📧 saipraneethsattu@gmail.com  
-🔗 [LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/yourusername)
+🔗 [LinkedIn](https://www.linkedin.com/in/saipraneeth-sattu/) | [GitHub](https://github.com/sattusaipraneeth)
